@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 800px;
+  height: 660px;
+  /*border: 1px solid #ccc;*/
+  margin: 0 auto;
+
+  background: url('images/assets/bg.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .init-box {
+  position: relative; 
+
+  width: 100%;
+  height: 100%;
+
+  background: url('images/assets/main page.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .init-box .start-btn {
+  position: absolute;
+  bottom: 71px;
+  left: 342px;
+
+  width: 167px;
+  height: 82px;
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+.wrapper .game-box {
+  position: relative; 
+  
+  width: 100%;
+}
+
+.wrapper .game-box .toolbar {
+  font-size: 24px;
+  line-height: 94px;
+
+  position: relative; 
+
+  width: 100%;
+  height: 94px;
+
+  background: url('images/assets/toolbar3.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .game-box .toolbar .time {
+  line-height: 34px; 
+
+  position: absolute;
+  top: 18px;
+  left: 140px;
+}
+
+.wrapper .game-box .toolbar .level {
+  line-height: 34px; 
+
+  position: absolute;
+  top: 18px;
+  left: 294px;
+
+  height: 34px;
+}
+
+.wrapper .game-box .toolbar .level img {
+  height: 34px;
+}
+
+.wrapper .game-box .toolbar .disorder {
+  position: absolute;
+  left: 341px;
+
+  width: 120px;
+  height: 84px;
+
+  cursor: pointer;
+}
+
+.wrapper .game-box .toolbar .disorder img {
+  position: absolute;
+  top: 40px; 
+  right: 0;
+}
+
+.wrapper .game-box .toolbar .scoring {
+  line-height: 34px;
+
+  position: absolute;
+  top: 20px;
+  left: 622px;
+
+  width: 251px;
+  height: 34px;
+
+  cursor: pointer;
+}
+
+.wrapper .game-box .toolbar .scoring img {
+  height: 30px;
+}
+
+.wrapper .game-box .game-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .game-box .game-area table#game {
+  border-spacing: 0; 
+  border-collapse: collapse;
+}
+
+.wrapper .game-box .game-area table#game .game-row {
+  height: 80px;
+}
+
+.wrapper .game-box .game-area table#game .game-row td {
+  width: 80px;
+  height: 80px;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box {
+  line-height: 64px;
+
+  display: inline-block;
+
+  width: 64px;
+  height: 64px;
+
+  cursor: pointer;
+
+  background: url('images/assets/pic-bg1.png') center no-repeat;
+  background-size: contain;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box.active {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 16px; 
+  background: url('images/assets/active1.png') center no-repeat;
+  background-size: 124%;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box img {
+  vertical-align: middle;
+}
+
+.wrapper .game-box .game-area #canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 800px;
+  height: 560px;
+}
+
+.wrapper .game-win {
+  position: absolute;
+  top: 0;
+
+  width: 800px;
+  height: 660px;
+
+  background: rgba(0, 0, 0, .4) url('images/assets/gamewin.png') center no-repeat;
+  background-size: auto;
+}
+.wrapper .game-win .current {
+  position: absolute;
+  top: 320px;
+  left: 241px;
+
+  width: 350px;
+  height: 60px;
+
+  text-align: center;
+}
+
+.wrapper .game-win .back {
+  position: absolute;
+  top: 473px;
+  left: 522px;
+
+  width: 149px;
+  height: 79px;
+
+  cursor: pointer;
+}
+
+.wrapper .game-over {
+  position: absolute;
+  top: 0;
+
+  width: 800px;
+  height: 660px;
+
+  background: rgba(0, 0, 0, .4) url('images/assets/gameover.png') center no-repeat;
+  background-size: auto;
+}
+
+.wrapper .game-over .current-score {
+  position: absolute;
+  top: 232px;
+  left: 308px;
+
+  width: 350px;
+  height: 60px;
+
+  text-align: center;
+}
+
+
+
+.wrapper .game-over .replay-btn {
+  position: absolute;
+  top: 483px;
+  left: 116px;
+
+  width: 149px;
+  height: 79px;
+
+  cursor: pointer;
+}
+.wrapper .game-over .back-btn {
+  position: absolute;
+  top: 483px;
+  left: 587px;
+
+  width: 149px;
+  height: 79px;
+
+  cursor: pointer;
+}
+
+.empty {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.number {
+  display: inline-block;
+
+  width: 34px; 
+  height: 34px;
+
+  background-size: contain;
+}
+
+/*# sourceMappingURL=index.css.map */
