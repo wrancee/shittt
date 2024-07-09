@@ -666,7 +666,7 @@ $(function () {
     $('audio').get(0).play();
     $('.init-box').removeClass('hidden');
     $('.game-box').addClass('hidden');
-    $('.game-over').addClass('hidden');
+    $('.game-win').addClass('hidden');
     this.reset();
   });
 });
