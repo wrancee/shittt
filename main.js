@@ -1250,7 +1250,11 @@ $(function () {
   $('.start-btn1').click(function () {
     $('audio').get(0).play();
     $('.init-box').addClass('hidden');
-    $('.game-box').removeClass('hidden');
+    $('.normalbg').removeClass('hidden');
+    setTimeout(function () {
+      $('.normalbg').addClass('hidden');
+      $('.game-box').removeClass('hidden');
+    }, 2400);
     var gameConfig = {
       cellWidth: 45,
       cellHeight: 45,
@@ -1265,7 +1269,11 @@ $(function () {
   $('.start-btn2').click(function () {
     $('audio').get(0).play();
     $('.init-box').addClass('hidden');
-    $('.game-box').removeClass('hidden');
+    $('.limitedbg').removeClass('hidden');
+    setTimeout(function () {
+      $('.limitedbg').addClass('hidden');
+      $('.game-box').removeClass('hidden');
+    }, 2400);
     var gameConfig = {
       cellWidth: 45,
       cellHeight: 45,
