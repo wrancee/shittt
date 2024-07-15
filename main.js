@@ -1313,4 +1313,54 @@ $(function () {
   });
 });
 
+const images = [
+  'images/background/bg1.png',
+  'images/background/bg2.png',
+  'images/background/bg3.png',
+  'images/background/n1.png',
+  'images/background/n2.png',
+  'images/background/n3.png',
+  'images/background/n4.png',
+  'images/background/n5.png',
+  'images/background/n6.png',
+  'images/background/n7.png',
+  'images/background/n8.png',
+  'images/background/n9.png',
+  'images/background/n10.png',
+  'images/background/n11.png',
+  'images/background/l1.png',
+  'images/background/l2.png',
+  'images/background/l3.png',
+  'images/background/l4.png',
+  'images/background/l5.png',
+  'images/background/l6.png',
+  'images/background/l7.png',
+  'images/background/l8.png',
+  'images/background/l9.png',
+  'images/background/l10.png',
+  'images/background/l11.png',
+  'images/background/l12.png',
 
+];
+
+function preloadImages(imageArray, callback) {
+  let loadedImages = 0;
+  const totalImages = imageArray.length;
+
+  for (let i = 0; i < totalImages; i++) {
+      const img = new Image();
+      img.src = imageArray[i];
+      img.onload = () => {
+          loadedImages++;
+          if (loadedImages === totalImages && callback) {
+              callback();
+          }
+      };
+  }
+}
+
+window.onload = () => {
+  preloadImages(images, () => {
+      document.querySelector('.normalbg').classList.add('animation-start');
+  });
+};
