@@ -11,38 +11,90 @@
   height: 660px;
   /*border: 1px solid #ccc;*/
   margin: 0 auto;
+  background: url('images/assets/bg.png') no-repeat center center/cover;
+}
 
-  background: url('images/assets/bg.png') center no-repeat;
+.wrapper .normalbg {
+  position: relative;
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  animation: normalSwitch 2.4s steps(12) infinite;
+}
+
+@keyframes normalSwitch {
+  0% { background: url('images/background/bg3.png') no-repeat center center/cover; }
+  8.33% { background: url('images/background/n1.png') no-repeat center center/cover; }
+  16.66% { background: url('images/background/n2.png') no-repeat center center/cover; }
+  25% { background: url('images/background/n3.png') no-repeat center center/cover; }
+  33.33% { background: url('images/background/n4.png') no-repeat center center/cover; }
+  41.66% { background: url('images/background/n5.png') no-repeat center center/cover; }
+  50% { background: url('images/background/n6.png') no-repeat center center/cover; }
+  58.33% { background: url('images/background/n7.png') no-repeat center center/cover; }
+  66.66% { background: url('images/background/n8.png') no-repeat center center/cover; }
+  75% { background: url('images/background/n9.png') no-repeat center center/cover; }
+  83.33% { background: url('images/background/n10.png') no-repeat center center/cover; }
+  91.66% { background: url('images/background/n11.png') no-repeat center center/cover; }
+  100% { background: url('images/background/n11.png') no-repeat center center/cover; }
+}
+
+.wrapper .limitedbg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  animation: limitedSwitch 2.4s steps(12) infinite;
+}
+
+@keyframes limitedSwitch {
+  0% { background: url('images/background/l1.png') no-repeat center center/cover; }
+  8.33% { background: url('images/background/l2.png') no-repeat center center/cover; }
+  16.66% { background: url('images/background/l3.png') no-repeat center center/cover; }
+  25% { background: url('images/background/l4.png') no-repeat center center/cover; }
+  33.33% { background: url('images/background/l5.png') no-repeat center center/cover; }
+  41.66% { background: url('images/background/l6.png') no-repeat center center/cover; }
+  50% { background: url('images/background/l7.png') no-repeat center center/cover; }
+  58.33% { background: url('images/background/l8.png') no-repeat center center/cover; }
+  66.66% { background: url('images/background/l9.png') no-repeat center center/cover; }
+  75% { background: url('images/background/l10.png') no-repeat center center/cover; }
+  83.33% { background: url('images/background/l11.png') no-repeat center center/cover; }
+  91.66% { background: url('images/background/l12.png') no-repeat center center/cover; }
+  100% { background: url('images/background/l12.png') no-repeat center center/cover; }
 }
 
 .wrapper .init-box {
   position: relative; 
-
   width: 100%;
   height: 100%;
+  animation: switch 0.6s infinite;
+  
+}
+@keyframes switch {
+  0% {background: url('images/background/bg1.png') no-repeat center center/cover;}
 
-  background: url('images/assets/mainpage.png') center no-repeat;
-  background-size: cover;
+  50% {background: url('images/background/bg2.png') no-repeat center center/cover;}
+
+  100% {background: url('images/background/bg3.png') no-repeat center center/cover;}
 }
 
 .wrapper .init-box .start-btn1 {
   position: absolute;
-  bottom: 188px;
-  left: 342px;
+  bottom: 133px;
+  left: 303px;
 
-  width: 167px;
+  width: 217px;
   height: 84px;
   margin: 0 auto;
 
   cursor: pointer;
 }
+
 .wrapper .init-box .start-btn2 {
   position: absolute;
-  bottom: 71px;
-  left: 342px;
+  bottom: 16px;
+  left: 303px;
 
-  width: 167px;
+  width: 217px;
   height: 84px;
   margin: 0 auto;
 
