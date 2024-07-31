@@ -98,8 +98,20 @@ LinkGame.prototype = {
   },
   nextLevel: function () {
     clearInterval(this.timmer);
-    if (this.level === 5) {
-      $('.game-win').removeClass('hidden');
+    if (this.level === 1){
+      $('.level1').removeClass('hidden');
+    }
+    else if (this.level === 2) {
+      $('.level2').removeClass('hidden');
+    }
+    else if (this.level === 3) {
+      $('.level3').removeClass('hidden');
+    }
+    else if (this.level === 4) {
+      $('.level4').removeClass('hidden');
+    }
+    else if (this.level === 5) {
+      $('.level5').removeClass('hidden');
     }
     else if (this.level <= 3){
       this.rows = 6 + this.level;
@@ -616,6 +628,27 @@ LinkGame.prototype = {
       self.checkMatch(data);
     }).on('click', '.disorder', function (event) {
       self.leftDisorderTime-- > 0 && self.disorder();
+    }).on('click', '.level1', function (event) {
+      self.rows = 6 + self.level;
+      self.cols = 6 + self.level*2;
+      self.reset();
+      $('.level1').addClass('hidden');
+    }).on('click', '.level2', function (event) {
+      self.rows = 6 + self.level;
+      self.cols = 6 + self.level*2;
+      self.reset();
+      $('.level2').addClass('hidden');
+    }).on('click', '.level3', function (event) {
+      self.rows = 6 + self.level;
+      self.cols = 6 + self.level*2;
+      self.reset();
+      $('.level3').addClass('hidden');
+    }).on('click', '.level4', function (event) {
+      self.reset();
+      $('.level4').addClass('hidden');
+    }).on('click', '.level5', function (event) {
+      $('.level5').addClass('hidden');
+      $('.game-win').removeClass('hidden');
     }).on('click', '.replay-btn', function () {
       $('audio').get(1).pause();
       $('audio').get(0).play();
@@ -636,6 +669,11 @@ LinkGame.prototype = {
   unbindDomEvents: function() {
     $('.wrapper').off('click', '.pic-box');
     $('.wrapper').off('click', '.disorder');
+    $('.wrapper').off('click', '.level1');
+    $('.wrapper').off('click', '.level2');
+    $('.wrapper').off('click', '.level3');
+    $('.wrapper').off('click', '.level4');
+    $('.wrapper').off('click', '.level5');
     $('.wrapper').off('click', '.replay-btn');
   }
 };
@@ -1247,6 +1285,29 @@ LinkGame2.prototype = {
 };
 
 $(function () {
+  $('.login-btn').click(function () {
+    $('audio').get(0).play();
+    $('.login').addClass('hidden');
+    $('.init-box').removeClass('hidden');
+  });
+});
+
+$(function () {
+  $('.start-game').click(function () {
+    $('audio').get(0).play();
+    $('.login').addClass('hidden');
+    $('.game-box').removeClass('hidden');
+    var gameConfig = {
+      cellWidth: 45,
+      cellHeight: 45,
+      level: 0,
+    }
+    window.linkgame = new LinkGame(gameConfig);
+    linkgame.init();
+  });
+});
+
+$(function () {
   $('.start-btn1').click(function () {
     $('audio').get(0).play();
     $('.init-box').addClass('hidden');
@@ -1313,6 +1374,32 @@ $(function () {
   });
 });
 
+$(function () {
+  $('.logo').click(function () {
+    //rules appear
+  });
+});
+
+$(function () {
+  $('.rule').click(function () {
+    //rules appear
+  });
+});
+
+$(function () {
+  $('.bag-btn').click(function () {
+    $('.bag').removeClass('hidden');
+    $('.init-box').addClass('hidden');
+  });
+});
+
+$(function () {
+  $('.close').click(function () {
+    $('.bag').addClass('hidden');
+    $('.init-box').removeClass('hidden');
+  });
+});
+
 const images = [
   'images/background/bg1.png',
   'images/background/bg2.png',
@@ -1364,3 +1451,18 @@ window.onload = () => {
       document.querySelector('.normalbg').classList.add('animation-start');
   });
 };
+
+$(document).ready(function() {
+  function resizeCanvas() {
+      var canvas = $('#canvas')[0];
+      var container = canvas.parentNode;
+      canvas.width = $(container).width();
+      canvas.height = $(container).height();
+  }
+
+  $(window).resize(function() {
+      resizeCanvas();
+  });
+
+  resizeCanvas();
+});
