@@ -682,7 +682,7 @@ function LinkGame2(config) {
   this.cols = config.cols + 2 ; // 列数
   this.rows = config.rows + 2 ; // 行数
   this.level = config.level || 0; // 等级
-  this.leftTime = 500; // 剩余时间
+  this.leftTime = 201; // 剩余时间
   this.leftDisorderTime = 5; // 剩余重排次数
   this.gifts = [ // 小图片集合
     'images/metashit/angit.png',
