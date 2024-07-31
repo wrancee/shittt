@@ -113,14 +113,7 @@ LinkGame.prototype = {
     else if (this.level === 5) {
       $('.level5').removeClass('hidden');
     }
-    else if (this.level <= 3){
-      this.rows = 6 + this.level;
-      this.cols = 6 + this.level*2;
-      this.reset();
-    }
-    else{
-      this.reset();
-    }
+    
   },
   // 模板替换
   replaceTpl: function (tpl, data) {
@@ -1451,18 +1444,3 @@ window.onload = () => {
       document.querySelector('.normalbg').classList.add('animation-start');
   });
 };
-
-$(document).ready(function() {
-  function resizeCanvas() {
-      var canvas = $('#canvas')[0];
-      var container = canvas.parentNode;
-      canvas.width = $(container).width();
-      canvas.height = $(container).height();
-  }
-
-  $(window).resize(function() {
-      resizeCanvas();
-  });
-
-  resizeCanvas();
-});
